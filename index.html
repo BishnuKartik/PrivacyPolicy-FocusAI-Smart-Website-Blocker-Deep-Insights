@@ -195,8 +195,8 @@ body {
    <h5 class="hero-title"><img src="logo.png" width="90" height="90">FocusAI: <span class="gradient-text">Smart Website Blocker & Deep Insights</span></h5>
     <h5 class="hero-title">Privacy <span class="gradient-text">Policy</span></h5>
     <p class="hero-sub">
-      WebsitesBlocker is built on the principle that your browsing data belongs to <strong>you alone</strong>.
-      This policy transparently describes how we handle (or rather, never touch) your information.
+      FocusAI: Smart Website Blocker & Deep Insights is built on the principle that your browsing data belongs to <strong>you alone</strong>.
+      This policy transparently describes exactly how your information is handled — and the one opt-in feature that involves an external service.
     </p>
     <div class="badge-list">
       <span class="badge badge-green">✅ Last updated: May 19, 2026</span>
@@ -214,30 +214,32 @@ body {
         <span>Introduction & commitment</span>
       </div>
       <div class="section-text">
-        WebsitesBlocker – Block Sites & Stay Focused is an offline-first, privacy-respecting browser extension. 
+        FocusAI: Smart Website Blocker & Deep Insights is a privacy-first browser extension.
         We have <strong>zero access</strong> to your browsing history, personal information, or any data you store within the extension.
         Your block lists, schedules, focus sessions, usage stats, and preferences are stored exclusively on your local device.
-        No servers, no data mining, no analytics — ever.
+        No servers, no data mining, no analytics — for all core features.<br><br>
+        The <strong>one exception</strong> is the optional AI Productivity Advisor: if you choose to enable it, your local usage data is sent to Mistral's API using your own API key to generate personalised advice. This feature is entirely opt-in, requires no account with us, and is covered in full detail in Section 5 below.
       </div>
     </div>
 
-    <!-- 2. Data collection (none) -->
+    <!-- 2. Data collection (none automatic) -->
     <div class="policy-section">
       <div class="section-title">
         <div class="section-icon">🚫</div>
-        <span>We collect absolutely nothing</span>
+        <span>We collect nothing — automatically</span>
       </div>
       <div class="section-text">
-        <strong>Zero data collection.</strong> WebsitesBlocker does not collect, transmit, store, or share any personally identifiable information. 
-        There are no analytics scripts, no crash reporters, no telemetry, no tracking pixels, and no background requests to any server. 
-        The extension never “phones home”. We have no idea which websites you block, how you use focus modes, or even that you installed the extension.
-        Your digital habits remain invisible — even to us.
+        <strong>Zero automatic data collection.</strong> FocusAI does not automatically collect, transmit, store, or share any personally identifiable information.
+        There are no analytics scripts, no crash reporters, no telemetry, no tracking pixels, and no background requests to any server.
+        The extension never “phones home”. We have no idea which websites you block, how you use focus modes, or even that you installed the extension.<br><br>
+        The <strong>only</strong> time any data leaves your device is when you actively request a response from the optional <strong>AI Productivity Advisor</strong> — covered in full in Section 5.
       </div>
       <div class="badge-list">
         <span class="badge">❌ No Google Analytics</span>
         <span class="badge">❌ No remote config</span>
         <span class="badge">❌ No cookies</span>
         <span class="badge">❌ No fingerprinting</span>
+        <span class="badge">❌ No background server calls</span>
       </div>
     </div>
 
@@ -268,7 +270,7 @@ body {
         <span>Permissions & why they're needed</span>
       </div>
       <div class="section-text">
-        WebsitesBlocker requires certain browser permissions solely to deliver blocking and focus features. 
+        FocusAI requires certain browser permissions solely to deliver blocking and focus features. 
         None of these permissions are used to collect or exfiltrate data:
         <ul style="margin-top: 12px; margin-left: 24px; color: var(--tx2); line-height: 1.7;">
           <li><strong>declarativeNetRequest</strong> – Enables efficient, real‑time site blocking without seeing your traffic content.</li>
@@ -282,16 +284,28 @@ body {
       </div>
     </div>
 
-    <!-- 5. Third parties & external requests -->
+    <!-- 5. Third parties & the AI Advisor exception -->
     <div class="policy-section">
       <div class="section-title">
         <div class="section-icon">🌐</div>
-        <span>No third parties, no external calls</span>
+        <span>Third-party services &amp; the AI Advisor</span>
       </div>
       <div class="section-text">
-        The extension never loads external fonts, scripts, images, or resources from any remote server. It does not embed any third‑party libraries that could phone home. 
-        Even the “More extensions” links on the welcome page open standard store URLs (Chrome Web Store / Edge Add‑ons) — but those are standard hyperlinks, not automated data transfers. 
-        Your local block rules never communicate with any backend API. <strong>WebsitesBlocker is a self‑contained, static extension.</strong>
+        For all core features — blocking, focus sessions, scheduling, insights, and usage tracking — FocusAI is entirely self&#8209;contained. The extension never loads external fonts, scripts, images, or resources from any remote server, and embeds no third&#8209;party libraries that could phone home. Your block rules, schedules, and preferences never communicate with any backend.<br><br>
+        <strong style="color: var(--or);">&#9888;&#65039; Optional AI Productivity Advisor — Mistral AI</strong><br>
+        FocusAI includes an optional AI Productivity Advisor powered by <strong>Mistral AI</strong>. This feature is <strong>disabled by default</strong> and only activates when you explicitly enable it and enter your own Mistral API key. When you request an AI insight, the following data is sent directly from your browser to Mistral's API servers:
+        <ul style="margin: 10px 0 10px 24px; color: var(--tx2); line-height: 1.8;">
+          <li>Your local usage statistics (sites visited, time spent, blocked attempts, focus session data)</li>
+          <li>Your Mistral API key (transmitted securely via HTTPS directly to Mistral)</li>
+        </ul>
+        <strong>We — the developer — never receive, store, log, or have access to this data.</strong> The request goes directly from your browser to Mistral's servers. Mistral's own privacy policy and data handling terms apply to any data processed by their API. You can review their policy at <a href="https://mistral.ai/privacy" target="_blank" style="color: var(--ac2); text-decoration: none; font-weight: 600;">mistral.ai/privacy</a>.<br><br>
+        If you do not enable the AI Advisor, no data ever leaves your device. You are always in full control.
+      </div>
+      <div class="badge-list">
+        <span class="badge badge-green">&#10003; Opt-in only — disabled by default</span>
+        <span class="badge badge-green">&#10003; You supply your own API key</span>
+        <span class="badge badge-green">&#10003; We never receive your data</span>
+        <span class="badge">&#9888; Mistral API: external service applies</span>
       </div>
     </div>
 
@@ -323,8 +337,8 @@ body {
         <span>Children’s privacy (COPPA & GDPR-K)</span>
       </div>
       <div class="section-text">
-        WebsitesBlocker does not knowingly collect any personal information from anyone, regardless of age. 
-        Because we collect absolutely no data, there is no risk of unintentionally storing information from children under 13. 
+        FocusAI does not knowingly collect any personal information from anyone, regardless of age. 
+        Because we collect no data automatically, and the one opt-in feature (AI Advisor) requires deliberate user action and an API key no child would have, there is no meaningful risk of storing information from children under 13. 
         Parents and guardians can use the extension to create a focused digital environment, knowing that no behavioral data is ever recorded or shared.
       </div>
     </div>
@@ -337,8 +351,8 @@ body {
       </div>
       <div class="section-text">
         Any future changes to this privacy policy will be reflected on this page and within the extension’s documentation. 
-        Updates will always preserve the core commitment: <strong>zero data collection, total offline privacy</strong>. 
-        The “Last updated” date at the top of this page indicates the latest revision. Continued use of WebsitesBlocker after changes means acceptance of the updated policy.
+        Updates will always preserve the core commitment: <strong>no automatic data collection, privacy-first design, and full transparency about the optional AI Advisor</strong>. 
+        The “Last updated” date at the top of this page indicates the latest revision. Continued use of FocusAI after changes means acceptance of the updated policy.
       </div>
     </div>
 
@@ -356,7 +370,7 @@ body {
     <div style="display: flex; gap: 18px; flex-wrap: wrap; align-items: center; justify-content: space-between;">
       <div style="display: flex; gap: 12px; align-items: center;">
         <div style="font-size: 34px;"><img src="logo.png" width="60" height="60"></div>
-        <div><strong style="font-size: 16px;">100% Offline & Private</strong><br><span style="color: var(--tx2); font-size: 13px;">No servers, no subscriptions, no hidden catch.</span></div>
+        <div><strong style="font-size: 16px;">Privacy-First by Default</strong><br><span style="color: var(--tx2); font-size: 13px;">No auto-collection, no subscriptions, no hidden catch. AI Advisor is opt-in only.</span></div>
       </div>
       <div style="display: flex; gap: 12px; align-items: center;">
         <div style="font-size: 34px;">♾️</div>
@@ -369,11 +383,11 @@ body {
   <footer class="footer reveal">
     <a href="welcome.html" class="footer-logo">
       <div class="footer-logo-icon"><img src="logo.png" width="60" height="60"></div>
-      <span class="footer-logo-name">WebsitesBlocker – Block Sites & Stay Focused</span>
+      <span class="footer-logo-name">FocusAI: Smart Website Blocker &amp; Deep Insights</span>
     </a>
     <div class="footer-txt">
       <strong>Privacy-first since day one</strong> &nbsp;·&nbsp; Built in Nepal 🇳🇵 <br>
-      No data collection · No tracking · Local storage only · Your focus, your rules
+      No automatic data collection · No tracking · Local storage by default · AI Advisor is opt-in only · Your focus, your rules
     </div>
   </footer>
 </div>
